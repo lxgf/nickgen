@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Nick Generator</title>
+    <link rel="stylesheet" href="assets/styles/mainStyle.css">
+    <link rel="stylesheet" href="assets/styles/switchStyle.css">
+    <link rel="stylesheet" href="assets/styles/info.css">
+    <script defer src="/eel.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="info hidden minified"></div>
+    
+    <div class="wrapper">
+
+        <header class="header">Simple <br> Nick Generator</header>
+
+        <div class="params">
+
+            <div class="params__param-row param-row">
+                <div class="param-row__name">Кол-во слогов</div>
+                <input class="param-row__value" type="number" name="syllables_number" placeholder="3">
+            </div>
+
+            <div class="params__param-row param-row">
+                <div class="param-row__name">Букв в слоге</div>
+                <label class="switch param-row__value">
+                    <input type="checkbox" name="letters_in_syllable" class="checkbox">
+                    <div class="slider">
+                        <div class="slider__left-part">2</div>
+                        <div class="slider__right-part">3</div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="params__param-row param-row">
+                <div class="param-row__name">PascalCase</div>
+                <label class="switch param-row__value">
+                    <input type="checkbox" name="pascal_case" class="checkbox" checked>
+                    <div class="slider">
+                        <div class="slider__left-part circle">o</div>
+                        <div class="slider__right-part circle">o</div>
+                    </div>
+                </label>
+            </div>
+
+        </div>
+
+        <div class="gen-block">
+            <div class="gen-block__result result">
+                <p class="result__val">connect eel</p>
+                <img src="assets/images/copy.svg" alt="Скопировать" class="result__copy copy">
+            </div>
+            <div class="gen-block__btn btn">
+                Генерировать
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

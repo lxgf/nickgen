@@ -1,0 +1,21 @@
+.info {
+    position: fixed;
+    z-index: 20;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff50;
+    height: 10vh;
+    width: 100%;
+    transition: .3s;
+}
+
+.info.minified {
+    height: 0;
+    opacity: 0;
+}
+
+.info.hidden {
+    display: none;
+}

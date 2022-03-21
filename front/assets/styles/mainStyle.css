@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background: black;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+}
+
+.wrapper {
+    padding: 3rem;
+    width: 100%;
+    max-width: 28rem;
+}
+
+.header {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 4.4rem;
+}
+
+.params {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.8rem;
+}
+
+.params__param-row {
+    margin-bottom: 1.8rem;
+}
+
+.params__param-row:last-child {
+    margin-bottom: 0;
+}
+
+.param-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.param-row__value {
+    height: 3rem;
+    width: 6.4rem;
+    background: #2F2F2F;
+    color: #DFDFDF;
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    border: .1rem solid #DFDFDF;
+    border-radius: 0.8rem;
+    transition: .15s ease-out;
+    user-select: none;
+}
+
+.param-row__value::placeholder {
+    color: #c4c4c4;
+}
+
+.param-row__value:hover {
+    box-shadow: 0 0 .6rem #dfdfdfcc;
+}
+
+.param-row__value:focus {
+    box-shadow: 0 0 .6rem #ffffff;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.gen-block {
+    display: flex;
+    flex-direction: column;
+    background: #2F2F2F;
+    border-radius: 0.8rem;
+    border: .1rem solid #DFDFDF;
+    text-align: center;
+    overflow: hidden;
+}
+
+.result {
+    display: flex;
+    font-weight: 300;
+    justify-content: center;
+    align-items: center;
+    padding: .6rem;
+}
+
+.result__val {
+    margin-right: .6rem;
+}
+
+.copy {
+    width: 1.8rem;
+    height: 1.8rem;
+    transition: .2s ease-out;
+}
+
+.copy:hover {
+    filter: brightness(.8);
+}
+
+.btn {
+    background: #DFDFDF;
+    color: #2F2F2F;
+    padding: .6rem;
+    transition: .2s ease-out;
+}
+
+.btn:hover {
+    color: black;
+    text-shadow: 0 0 .5rem #00000070;
+}
+
+.copy, .btn {
+    cursor: pointer;
+    user-select: none;
+}
+
+@media (min-width: 750px) {
+    html {
+        font-size: 20px;
+    }
+}

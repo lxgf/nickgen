@@ -32,10 +32,10 @@ def generate_syllable(consonants_number: int, vowels_number: int):
         case _:
             return get_consonant() + get_vowel()
 
-def generate_word(max_syllables_number: int, letters_in_syllable: int, pascal_case: bool):
-    if 2 <= max_syllables_number <= 10:
+def generate_nick(syllables_number: int, letters_in_syllable: int, pascal_case: bool):
+    if 2 <= syllables_number <= 10:
         word = ''
-        for i in range(max_syllables_number):
+        for i in range(syllables_number):
             if letters_in_syllable == 3:
                 if pascal_case:
                     syllable = generate_syllable(random.randint(1, 2), random.randint(1, 2))
@@ -49,12 +49,9 @@ def generate_word(max_syllables_number: int, letters_in_syllable: int, pascal_ca
                 else:
                     word += generate_syllable(1, 1)
             else:
-                print('Incorrect letters in syllable number (2 or 3)')
+                return('Incorrect letters in syllable number (2 or 3)')
                 break
 
         return word
     else:
-        print('Incorrect syllables number (must be >=2 and <=10)')
-
-
-print(generate_word(4, 3, True))
+        return('Incorrect syllables number (must be >=2 and <=10)')

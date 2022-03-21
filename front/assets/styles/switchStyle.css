@@ -1,0 +1,51 @@
+.switch {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.checkbox {
+  appearance: none;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  position: absolute;
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.switch:hover {
+  box-shadow: 0 0 .6rem #dfdfdfcc;
+}
+
+.slider::before {
+  content: '';
+  width: 50%;
+  height: 100%;
+  backdrop-filter: invert(1);
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  cursor: pointer;
+  transition: .15s ease-out;
+}
+
+.checkbox:checked+.slider::before {
+  left: 50%;
+}
+
+.circle {
+  opacity: 0;
+  margin-bottom: .2rem;
+}
+
+.circle:last-child {
+  opacity: 1;
+}
+
